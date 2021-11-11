@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method = "POST" novalidate>
+     {{top_city.hidden_tag()}}
+
+     <p> {{top_city.city_name.label}} 
+	 {{top_city.city_name(size=32)}}
+
+     <p> {{top_city.city_rank.label}} 
+	 {{top_city.city_rank(size=32)}}
+
+     <p> {{top_city.is_visited.label}} 
+	 {{top_city.is_visited()}}
+
+     <p> {{top_city.submit.label}} 
+	 {{top_city.submit()}}
+</form>
+
+{% endblock %}
